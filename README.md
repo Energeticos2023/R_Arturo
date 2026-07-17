@@ -2,6 +2,11 @@
 
 ## Campaña Arturo Santisteban · Mochumí
 
+Sitio web: <https://energeticos2023.github.io/R_Arturo/>
+
+La publicación se actualiza automáticamente con GitHub Pages cada vez que se
+sube un cambio a la rama `main`.
+
 Sitio informativo para Arturo Santisteban Santisteban, candidato de Renovación
 Popular Perú para la alcaldía distrital de Mochumí, Lambayeque. Los canales de
 participación visibles en la aplicación son:
@@ -111,3 +116,4 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
