@@ -61,6 +61,7 @@ const WHATSAPP_URL = `https://wa.me/51922282679?text=${encodeURIComponent("Hola 
 const OFFICIAL_FORM_URL = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqIKWlRUNDhNNUU1Q1ZJVzBWU09COE4zSlo4NVRDNy4u";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61591472536087";
 const ALLIANCE_PDF_URL = "/docs/8111093-alianza-electoral-nacional-renovacion-popular-peru-nacional.pdf";
+const ANDROID_APK_URL = "https://energeticos2023.github.io/R_Arturo/Arturo-Mochumi.apk";
 
 const proposals = [
   {
@@ -424,8 +425,8 @@ export function CampaignSite() {
       </section>
 
       <section className="install-banner section-pad">
-        <div><div className="app-mark">R</div><span><small>LLÉVANOS CONTIGO</small><h2>Instala la aplicación.</h2><p>Android puede instalar un APK cuando exista una versión nativa. iPhone no usa APK: agrega esta web a inicio desde Safari.</p></span></div>
-        <button className="button cream" onClick={handleInstall}><Icon name="download"/> Ver cómo instalarla</button>
+        <div><div className="app-mark">R</div><span><small>LLÉVANOS CONTIGO</small><h2>Instala la aplicación.</h2><p>En Android puedes descargar el APK oficial. En iPhone no se usa APK: agrega esta web a inicio desde Safari.</p></span></div>
+        <div className="install-actions"><a className="button cream" href={ANDROID_APK_URL} download="Arturo-Mochumi.apk"><Icon name="download"/> Descargar APK Android</a><button className="button cream" onClick={handleInstall}><Icon name="home"/> Ver cómo instalarla</button></div>
       </section>
 
       <section className="sources section-pad" id="fuentes">
@@ -448,7 +449,7 @@ export function CampaignSite() {
         <button onClick={() => scrollTo("verifica")}><Icon name="eye"/><span>Verifica</span></button>
       </nav>
 
-      {installOpen && <div className="modal-backdrop" role="presentation" onMouseDown={() => setInstallOpen(false)}><div className="install-modal" role="dialog" aria-modal="true" aria-labelledby="install-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" onClick={() => setInstallOpen(false)} aria-label="Cerrar"><Icon name="close"/></button><div className="app-mark">R</div><h2 id="install-title">Instala la aplicación correcta</h2><p className="install-note">Un APK solo funciona en Android. En iPhone la instalación correcta es una PWA desde Safari, sin APK.</p><div className="install-steps"><article><span>ANDROID · CHROME</span><b>1. Si recibes un APK, ábrelo en Android y autoriza su instalación.</b><b>2. Para esta web, abre el menú ⋮ y pulsa “Instalar app” o “Agregar a pantalla principal”.</b></article><article><span>IPHONE · SAFARI</span><b>1. Pulsa Compartir.</b><b>2. Elige “Agregar a inicio”.</b></article></div><button className="button primary wide" onClick={() => setInstallOpen(false)}>Entendido</button></div></div>}
+      {installOpen && <div className="modal-backdrop" role="presentation" onMouseDown={() => setInstallOpen(false)}><div className="install-modal" role="dialog" aria-modal="true" aria-labelledby="install-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" onClick={() => setInstallOpen(false)} aria-label="Cerrar"><Icon name="close"/></button><div className="app-mark">R</div><h2 id="install-title">Instala la aplicación correcta</h2><p className="install-note">Un APK solo funciona en Android. En iPhone la instalación correcta es una PWA desde Safari, sin APK.</p><div className="install-steps"><article><span>ANDROID · APK</span><b>1. Descarga el APK oficial.</b><b>2. Ábrelo en tu celular y autoriza la instalación si Android lo solicita.</b><a className="button primary wide" href={ANDROID_APK_URL} download="Arturo-Mochumi.apk"><Icon name="download"/> Descargar APK</a></article><article><span>IPHONE · SAFARI</span><b>1. Pulsa Compartir.</b><b>2. Elige “Agregar a inicio”.</b></article></div><button className="button primary wide" onClick={() => setInstallOpen(false)}>Entendido</button></div></div>}
     </main>
   );
 }
