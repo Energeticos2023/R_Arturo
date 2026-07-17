@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 
 type IconName =
   | "water"
@@ -304,11 +303,11 @@ export function CampaignSite() {
           </div>
           <div className="hero-visual">
             <div className="sun-disc"></div>
-            <Image
+            <img
               src="/arturo-campaign.png"
               alt="Arturo Santisteban, propuesta para la alcaldía distrital de Mochumí"
-              fill
-              priority
+              loading="eager"
+              decoding="async"
               sizes="(max-width: 820px) 100vw, 48vw"
             />
             <div className="candidate-card">
@@ -453,3 +452,4 @@ export function CampaignSite() {
     </main>
   );
 }
+
